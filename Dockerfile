@@ -20,6 +20,6 @@ RUN cargo build --release --target x86_64-unknown-linux-musl
 
 # Create a new stage with a minimal image
 FROM scratch
-COPY --from=builder /api-deployment-example/target/x86_64-unknown-linux-musl/release/api-deployment-example /api-deployment-example
-ENTRYPOINT ["/api-deployment-example"]
+COPY --from=builder /api-deployment-example/target/x86_64-unknown-linux-musl/release/api-deployment-example /rust-api-deployment-example
+ENTRYPOINT ["/rust-api-deployment-example"]
 EXPOSE 3000
