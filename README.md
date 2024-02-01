@@ -1,4 +1,3 @@
-Test
 
 # API Deployment Example
 
